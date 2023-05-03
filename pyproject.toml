@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sp-seg-tool"
+description = "SP-SEG: A tool for manual segmentatio by spheripixel projection"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+keywords = ["point cloud", "segmentation"]
+authors = [
+    {name = "Jakub Walczak", email = "jakub.walczak@p.lodz.pl"},
+    {name = "Adam Osuch"},
+    {name = "Adam Wojciechowski"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
+    "Environment :: Win32 (MS Windows)",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+    "Topic :: Multimedia :: Graphics :: Editors",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Topic :: Scientific/Engineering :: Visualization"
+]
+dependencies = [
+    "numpy>=1.23.0",
+    "pillow>=9.3.0",
+    "pydantic>=1.10.0",
+    "PyQt5>=5.15.0",
+    "scikit-learn>=1.2.0",
+    "scipy>=1.9.0",
+    "colormath",
+    "tqdm"
+]
+dynamic = ["version", "readme"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.dynamic]
+version = {attr = "sp-seg-tool._version.VERSION"}
+readme = {file = "README.MD"}
+
+[project.scripts]
+spseg = "sp-seg-tool.__main__:run"
