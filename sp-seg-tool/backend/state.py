@@ -187,7 +187,8 @@ class State:
                 return State.normalize_array(np.array(background))
 
     def save_segmentation_result(self, path: os.PathLike | str):
-        point_set = set()
+        with open(os.path.join(path), "wt") as file:
+            file.write(f"{len(self.xyz)}\n")
         for x in tqdm(range(self.WIDTH)):
             for y in range(self.HEIGHT):
                 category_code = self.point_data.category_code[y, x]
@@ -197,8 +198,7 @@ class State:
                     color = self.color[pt_idx].astype(np.uint8)
                     category_code = int(category_code)
                     instance_idx = int(instance_idx)
-                    point_set.add(
-                        (
+                    pt = (
                             str(coords[0]),
                             str(coords[1]),
                             str(coords[2]),
@@ -207,12 +207,8 @@ class State:
                             str(color[2]),
                             str(category_code),
                             str(instance_idx),
-                        )
                     )
-        with open(os.path.join(path), "wt") as file:
-            file.write(f"{len(self.xyz)}\n")
-            for pt in point_set:
-                file.write(f"{' '.join(pt)}\n")
+                    file.write(f"{' '.join(pt)}\n")
 
     def set_current_category_code(self, code: int):
         self.current_category_code = code
