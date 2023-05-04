@@ -1,8 +1,8 @@
-# SP-SEG: A tool for manual segmentation by spheripixel projection
+# SP-SEG: Proof of concept tool for manual segmentation by spheripixel projection
 In this repository, you can find a proof of concept of the tool for manual point cloud labeling by spherical point-pixel projection.
 
 ## ❗ Limitations
-The current version is just the prototype.
+The current version is just the proof of concept version.
 
 ## 🔧 Environment and installation
 ```python
@@ -34,9 +34,74 @@ D:\>segtool
 ## 📖 Instruction
 The main view of the software looks like the following:
 
+1. [Opening point cloud](#opening-a-point-cloud)
+2. [Loading labels definition](#loading-labels-definition)
+3. [Zooming in and out](#zooming-in-and-out)
+4. [Vertical roll](#vertical-roll)
+5. [Horizontal roll](#horizontal-roll)
+6. [Object segentation](#object-segmentation)
+7. [Deselecting region](#deselecting-region)
+8. [Changing mask opacity](#changing-mask-opacity)
+9. [Accepting an object](#accepting-an-object)
+10. [Saving segmentation result](#saving-segmentation-result)
+
+
+### Opening a point cloud
+
+
+
+### Loading labels definition
+
+
+### Zooming in and out
+
+
+
+### Vertical roll
+
+
+
+### Horizontal roll
+
+### Object segmentation
+
+### Deselecting region
+
+### Changing mask opacity
+
+
+### Accepting an object
+
+
+### Saving segmentation result
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <img src="figs/main_view.JPG" alt="Main view of the SegTool" style="height: 100%; width:100%;"/>
 
-### 1. Opening the point cloud
+### 1. Opening a point cloud
 To open a point cloud, choose the opening icon <img src="figs/open_icon.JPG" style="height: 25px; width:25px;"/>
 and point the proper file (**currently only PTS files are with columns (x, y, z, intensity, R, G, B) are supported**).
 
@@ -157,7 +222,20 @@ The result is selected as a PTS point cloud with extra two last columns:
 - [ ] handle non-single-setup point clouds
 - [ ] enable saving draft segmentation result
 
-## ⚖️ Attribution
+
+## 📝 Citation
+
+```bibtex
+@ONLINE{sp-seg,
+  author = {Walczak, J., Osuch, A., Wojciechowski, A.},
+  title = {{SP-SEG}: Proof of concept tool for manual segmentation by spheripixel projection},
+  year = 2023,
+  url = {https://github.com/jamesWalczak/sp-seg-tool},
+  urldate = {<access date here>}
+}
+```
+
+## ⚖️ 3rd party attribution
 <b>Icons attribution:</b> <a href='https://www.flaticon.com/free-icons/save' title='save icons'>Save icons created by Freepik - Flaticon</a>
 <br/>
 <b>Animation attribution:</b> Animation generated from <a href='https://icons8.com'>Icons8</a>
