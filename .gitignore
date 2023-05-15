@@ -5,6 +5,7 @@ dev-resources/
 *$py.class
 
 *.pts
+*.mp4
 
 # C extensions
 *.so

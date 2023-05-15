@@ -43,8 +43,8 @@ include-package-data = true
 where = ["."]
 
 [tool.setuptools.dynamic]
-version = {attr = "sp-seg-tool._version.VERSION"}
+version = {attr = "sp_seg_tool._version.VERSION"}
 readme = {file = "README.MD"}
 
 [project.scripts]
-spseg = "sp-seg-tool.__main__:run"
+spseg = "sp_seg_tool.__main__:run"
