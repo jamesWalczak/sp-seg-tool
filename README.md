@@ -10,18 +10,19 @@ python >= 3.10
 ```
 Required packages:
 ```python
-"numpy>=1.23.0",
-"pillow>=9.3.0",
-"pydantic>=1.10.0",
-"PyQt5>=5.15.0",
-"scikit-learn>=1.2.0",
-"scipy>=1.9.0",
+"PyQt5",
+"Pillow",
+"numpy",
+"pydantic",
+"scikit-learn",
+"scipy",
 "colormath",
-"tqdm"
+"tqdm",
+"toml"
 ```
 
 To install the software:
-1. Clone the repository nagivate to the root directory, and run:
+1. Clone the repository and run inside:
 ```bash
 pip install .
 ```
@@ -29,6 +30,11 @@ pip install .
 ```bash
 pip install sp-seg
 ```
+
+> If you're experiencing issues with installing the package, install firstly the dependencies:
+> ```bash
+> pip install PyQt5 Pillow numpy pydantic scikit-learn scipy colormath tqdm toml
+> ```
 
 Then, you can run the software with the command:
 ```bash
