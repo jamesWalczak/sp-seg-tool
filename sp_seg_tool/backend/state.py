@@ -185,7 +185,6 @@ class State:
                 background = Image.fromarray(
                     State.normalize_array(background)
                 ).convert("L")
-                print(f"max = {np.max(background)}, min= {np.min(background)}")
                 return State.normalize_array(np.array(background))
 
     def save_segmentation_result(self, path: os.PathLike | str):
