@@ -72,20 +72,7 @@ To open a point cloud, click `Open` icon in the toolbar and choose a proper file
 To open labels click the proper icon in the toolbar and choose the JSON file with labels definitions.
 Example labels definition may look like below:
 
-```json
-[
-  {
-    "label": "ceiling",
-    "code": 0,
-    "color": [4, 255, 0]
-  },
-  {
-    "label": "floor",
-    "code": 1,
-    "color": [255, 128, 0]
-  }
-]
-```
+
 
 ![](gifs/open_labels.gif)
 
