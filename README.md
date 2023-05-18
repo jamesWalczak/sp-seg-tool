@@ -28,7 +28,7 @@ pip install .
 ```
 1. Or use:
 ```bash
-pip install sp-seg
+pip install spseg-tool
 ```
 
 > If you're experiencing issues with installing the package, install firstly the dependencies:
